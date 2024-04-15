@@ -1,0 +1,16 @@
+<section class='nearest_stations'>
+  <h1>Nearest Station</h1>
+  <p>Station Name: <%= @station.name %></p>
+  <p>Address: <%= @station.address %></p>
+  <p>Fuel Type: <%= @station.fuel_type %></p>
+  <p>Access Times: <%= @station.access_times %></p>
+
+  <p>Distance to Station: <%=@directions.distance  %></p>
+  <p>Travel Time: <%= @directions.travel_time %></p>
+  
+  <p> Directions:
+  <% @directions.maneuvers.each do |maneuver| %>
+    <p><%= maneuver%></p>
+  <% end  %></p>
+
+</section>
